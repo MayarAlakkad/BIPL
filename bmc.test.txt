@@ -1,0 +1,19 @@
+$ORIGIN bmc.test.
+$TTL 300
+@       IN SOA  @ bmc.test. (
+                                        2023100102      ; serial
+                                        3M      ; refresh
+                                        1M      ; retry
+                                        30D     ; expire
+                                        1M )    ; minimum
+        NS      rocky1.bmc.test.
+
+rocky1 IN A 192.168.20.1
+BMC-DC1 IN A 192.168.10.1
+BMC-DC2 IN A 192.168.10.2
+BMC-DC3 IN A 192.168.10.3
+BMC-Core1 IN A 192.168.10.4
+BMC-Core2 IN A 192.168.10.5
+srv4 IN A 192.168.20.224
+ftp IN CNAME rocky1
+www IN CNAME rocky1
